@@ -87,7 +87,7 @@ public class FlutterPushPlugin implements MethodCallHandler {
         mPushAgent.register(new IUmengRegisterCallback() {
             @Override
             public void onSuccess(String deviceToken) {
-                Log.e("push","deviceToken:" + deviceToken);
+                Log.e("push", "deviceToken:" + deviceToken);
                 FlutterPushPlugin.deviceToken = deviceToken;
 
                 if (channel == null) return;
@@ -108,6 +108,7 @@ public class FlutterPushPlugin implements MethodCallHandler {
 
             @Override
             public Notification getNotification(Context context, UMessage msg) {
+                Log.e("push", "getNotification");
                 return super.getNotification(context, msg);
             }
 

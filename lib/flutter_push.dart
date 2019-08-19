@@ -28,6 +28,7 @@ class FlutterPush {
         case "getPushMessage":
           //获取deviceToken
           String message = call.arguments;
+          print("push:$message");
           _getPushMessage(message);
           break;
       }
