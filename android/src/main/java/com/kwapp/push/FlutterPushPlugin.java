@@ -88,6 +88,7 @@ public class FlutterPushPlugin implements MethodCallHandler {
             @Override
             public void onSuccess(String deviceToken) {
                 Log.e("push", "deviceToken:" + deviceToken);
+                Log.e("push","推送注册成功");
                 FlutterPushPlugin.deviceToken = deviceToken;
 
                 if (channel == null) return;
@@ -129,6 +130,8 @@ public class FlutterPushPlugin implements MethodCallHandler {
 
             @Override
             public void dealWithCustomAction(Context context, UMessage msg) {
+
+                Log.e("push", "dealWithCustomAction");
 
                 String message = msg.custom;
 
